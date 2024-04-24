@@ -1,9 +1,11 @@
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import App from "./App";
+import App2 from "./App2";
+import App4 from "./App4";
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import App from "./App";
 
 const client = new ApolloClient({
   uri: "http://localhost:3000/graphql/",
@@ -19,6 +21,8 @@ root.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
       <App />
+      <App2/>
+      <App4/>
     </ApolloProvider>
   </React.StrictMode>
 );

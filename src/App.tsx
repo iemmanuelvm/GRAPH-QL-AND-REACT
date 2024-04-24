@@ -10,6 +10,7 @@ const TODO_QUERY = gql`
     }
     totalTodos
     todos {
+      id
       description
     }
   }
@@ -48,7 +49,7 @@ export default function App() {
       <h2>All Todos</h2>
       <ul>
   {data.todos.map((todo: Todo, index: number) => (
-    <li key={index}>{todo.description}</li>
+    <li key={index}>{todo.id}-{todo.description}</li>
   ))}
 </ul>
     </div>
